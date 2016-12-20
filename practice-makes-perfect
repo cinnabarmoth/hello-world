@@ -1,0 +1,6 @@
+# returns the factorial of a number. An example of recursion as the function calls itself.
+def factorial(x):
+    if x <= 1:
+        return x
+    else:
+        return x * factorial(x - 1)
