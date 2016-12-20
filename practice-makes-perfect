@@ -56,4 +56,14 @@ def scrabble_score(word):
         
         
         return total
-            
+ 
+ # replaces the letters of a given word in a text with a asterisks
+ 
+def censor(text, word):
+    result = ""
+    for each in text.split():
+        if each == word:
+            result = result + "*" * len(word) + " "
+        else:
+            result = result + each + " "
+    return result[:-1]
