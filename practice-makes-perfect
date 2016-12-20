@@ -67,3 +67,12 @@ def censor(text, word):
         else:
             result = result + each + " "
     return result[:-1]
+    
+ # Returns the number of times an item appears in a list
+ 
+ def count(sequence, item):
+    found = 0
+    for i in sequence:
+        if i == item:
+            found = found + 1
+    return found
