@@ -17,4 +17,14 @@ def is_prime(x):
         return True
     else:
         return False
+        
+ # returns a given string with the characters reversed.
+ def reverse(text):
+    reversed_text = []
+    # iterate backwards through string from last character
+    for i in range(len(text) - 1, -1, -1):
+        reversed_text.append(text[i])
+        i -= 1
+        
+    return "".join(reversed_text)
             
