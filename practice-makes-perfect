@@ -84,3 +84,10 @@ def purify(numbers):
         if number % 2 == 0:
             result.append(number)
     return result
+
+# iterates through a list of integers and returns their product
+def product(numbers):
+    result = 1
+    for number in numbers:
+        result = result * number
+    return result
