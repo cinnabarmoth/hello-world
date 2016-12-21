@@ -99,3 +99,15 @@ def remove_duplicates(something):
         if item not in result:
             result.append(item)
     return result
+
+# returns the median of a given list of integers
+def median(numbers):
+    sorted_numbers = sorted(numbers)
+    result = 0
+    index = len(sorted_numbers) / 2
+    if len(sorted_numbers) % 2 == 0:
+        result = float(sorted_numbers[index] + sorted_numbers[index - 1]) / 2
+    else:
+        result = float(sorted_numbers[index])
+    return result
+        
