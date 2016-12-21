@@ -123,31 +123,5 @@ def median(numbers):
         result = float(sorted_numbers[index])
     return result
     
-# prints the (mean) average of a given list of numbers
 
-def grades_average(grades):
-    result = grades_sum(grades) / float(len(grades))
-    return result
-
-print(grades_average(grades))
-
-# prints the variance of a given list of numbers
-def grades_variance(scores):
-    average = grades_average(scores)
-    variance = 0
-    for score in scores:
-        sq_diff = (average - score) ** 2
-        variance += sq_diff
-    result = variance / (len(scores))
-    return result
-    
-print grades_variance(grades)
-
-# prints the standard deviation of a given list of numbers
-def grades_std_deviation(variance):
-    return variance ** 0.5
-
-variance  = grades_variance(grades)
-
-print grades_std_deviation(variance)
         
