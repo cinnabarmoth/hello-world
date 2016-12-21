@@ -1,0 +1,113 @@
+# returns the factorial of a number. An example of recursion as the function calls itself.
+def factorial(x):
+    if x <= 1:
+        return x
+    else:
+        return x * factorial(x - 1)
+        
+# returns True if x is a prime number, False otherwise
+def is_prime(x):
+    if x == 2:
+        return True
+    elif x > 2:
+        for i in range(2, x - 1):
+            if x % i == 0:
+                i += 1
+                return False
+        return True
+    else:
+        return False
+        
+ # returns a given string with the characters reversed.
+ def reverse(text):
+    reversed_text = []
+    # iterate backwards through string from last character
+    for i in range(len(text) - 1, -1, -1):
+        reversed_text.append(text[i])
+        i -= 1
+        
+    return "".join(reversed_text)
+    
+ 
+ # returns a string with the vowels removed
+ def anti_vowel(text):
+    result = ""
+    for i in text:
+        if i not in "aeiouAEIOU":
+            result = result + i
+            i == 1
+    return result
+    
+ # calculates the Scrabble score for a given word
+ score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2, 
+         "f": 4, "i": 1, "h": 4, "k": 5, "j": 8, "m": 3, 
+         "l": 1, "o": 1, "n": 1, "q": 10, "p": 3, "s": 1, 
+         "r": 1, "u": 1, "t": 1, "w": 4, "v": 4, "y": 4, 
+         "x": 8, "z": 10}
+         
+def scrabble_score(word):
+    lwr_word = word.lower()
+    total = 0
+    count = 0
+    while count < len(word):
+        for i in lwr_word:
+            total = total + score[i]
+        count =+ 1
+        
+        
+        return total
+ 
+ # replaces the letters of a given word in a text with a asterisks
+ 
+def censor(text, word):
+    result = ""
+    for each in text.split():
+        if each == word:
+            result = result + "*" * len(word) + " "
+        else:
+            result = result + each + " "
+    return result[:-1]
+    
+ # Returns the number of times an item appears in a list
+ 
+ def count(sequence, item):
+    found = 0
+    for i in sequence:
+        if i == item:
+            found = found + 1
+    return found
+
+# iterates through a list of numbers and returns a list of the even numbers only.
+def purify(numbers):
+    result = []
+    for number in numbers:
+        if number % 2 == 0:
+            result.append(number)
+    return result
+
+# iterates through a list of integers and returns their product
+def product(numbers):
+    result = 1
+    for number in numbers:
+        result = result * number
+    return result
+    
+# iterates through a given list and returns a new list with duplicated elements removed.
+def remove_duplicates(something):
+    result = []
+    for item in something:
+        if item not in result:
+            result.append(item)
+    return result
+
+# returns the median of a given list of integers
+def median(numbers):
+    sorted_numbers = sorted(numbers)
+    result = 0
+    index = len(sorted_numbers) / 2
+    if len(sorted_numbers) % 2 == 0:
+        result = float(sorted_numbers[index] + sorted_numbers[index - 1]) / 2
+    else:
+        result = float(sorted_numbers[index])
+    return result
+        
