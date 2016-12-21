@@ -91,3 +91,11 @@ def product(numbers):
     for number in numbers:
         result = result * number
     return result
+    
+# iterates through a given list and returns a new list with duplicated elements removed.
+def remove_duplicates(something):
+    result = []
+    for item in something:
+        if item not in result:
+            result.append(item)
+    return result
