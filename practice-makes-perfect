@@ -76,3 +76,11 @@ def censor(text, word):
         if i == item:
             found = found + 1
     return found
+
+# iterates through a list of numbers and returns a list of the even numbers only.
+def purify(numbers):
+    result = []
+    for number in numbers:
+        if number % 2 == 0:
+            result.append(number)
+    return result
